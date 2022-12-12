@@ -1,0 +1,46 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.container{
+  display: block;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  border-radius: 10px;
+
+  background-color: lightgreen;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+form input{
+  padding: 5px;
+  margin: 0 0 10px 0;
+  font-size: 15pt;
+}
+h1{
+  margin: 20px;
+}
+.clms{
+  display: grid;
+  grid-template-columns: 430px auto 52%;
+  gap: 25px;
+  width: 100%;
+}
+.card{
+  padding: 15px;
+  width: 400px;
+  height:  400px;
+  background-color: chartreuse;
+}
+.allPlants{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
