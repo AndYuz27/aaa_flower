@@ -28,10 +28,11 @@ export class AllPlants  implements OnInit{
   ngOnInit() {
     this.fetchPlants()
   }
+  
 
-  onPlantsFetch(){
-    this.fetchPlants()
-  }
+  // onPlantsFetch(){
+  //   this.fetchPlants()
+  // }
 
   onPlantCreate(plants: {name: string, description: string, images: string[], category: string, sunlight: number, wathering:number, temperature: number}){
     console.log(plants)
@@ -49,6 +50,7 @@ export class AllPlants  implements OnInit{
        for(const key in res){
         if(res.hasOwnProperty(key)){
           plants.push({...res[key], id: key})
+          console.log(res)
         }
         
        }

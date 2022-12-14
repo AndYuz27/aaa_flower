@@ -10,6 +10,7 @@ import {HeaderComponent} from "./Header/header.component";
 import {NotFound} from "./NotFound/notfound.component";
 import {AllPlants} from "./Plants/plants.component";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PlantsPage } from './PlantPage/plantpage.component';
 
 
 
@@ -18,7 +19,9 @@ const routers: Routes = [
   {path: "", component: HomePage},
   {path: "about", component: AboutPage},
   {path: "all", component: AllPlants},
-  {path: "**", component: NotFound}
+  { path: "plant/:id", component: PlantsPage },
+  {path: "**", component: NotFound},
+
 
 
 ]
