@@ -12,6 +12,7 @@ import {AllPlants} from "./Plants/plants.component";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PlantsPage } from './PlantPage/plantpage.component';
 import  {PlantsPart} from './PlantsPart/plantspart.component';
+import { CommonModule } from '@angular/common';
 
 
 //список путей SPA
@@ -37,6 +38,7 @@ const routers: Routes = [
     AllPlants,
     PlantsPart,
     NotFound,
+    
 
   ],
   imports: [
@@ -44,7 +46,8 @@ const routers: Routes = [
     FontAwesomeModule,
     FormsModule,
     RouterModule.forRoot(routers),
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

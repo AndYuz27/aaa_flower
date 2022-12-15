@@ -30,7 +30,10 @@ ItemPlants: any;
       this.ItemPlants = res
     })
   }
-
+onDeletePlant(id: string){
+  this.http.delete(`https://api.petiteweb.dev/plants/${id}`)
+  .subscribe()
+}
 
 
 

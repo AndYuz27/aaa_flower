@@ -5,6 +5,7 @@
 </div>
 <div class="gg2">
     <img src="{{ItemPlants.images[0]}}" alt="plant" width="500">
+
 <p>{{ItemPlants.description || "нет инфы"}}</p>
 </div>
 <div class="gg3">
@@ -12,4 +13,5 @@
 <p>Солнце: {{ItemPlants.sunlight || "нет инфы"}}</p>
 <p>Вода: {{ItemPlants.watering || "нет инфы"}}</p>
 </div>
+<button (click)="onDeletePlant(ItemPlants._id)">Delete</button>
 </div>
