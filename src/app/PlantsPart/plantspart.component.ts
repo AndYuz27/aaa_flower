@@ -2,21 +2,26 @@ import { HttpBackend, HttpClient } from "@angular/common/http";
 import {Component, OnInit} from "@angular/core";
 import { map } from "rxjs/operators";
 import { Plants } from "src/app/model/plant";
+import { ActivatedRoute } from "@angular/router";
+
 
 @Component({
   selector:"plant-part",
   templateUrl: "./plantspart.component.html",
   styleUrls: ["./plantspart.component.scss"]
+  
 })
 
 export class PlantsPart  implements OnInit{
   display = "none"
   allPlants: Plants[] = []
   plantsPart = this.allPlants.slice(1, 4);
+  catt: string //= "Садовые"
   
 
-  constructor(private http: HttpClient){
-
+  
+  constructor(private http: HttpClient, private actRoute: ActivatedRoute){
+    this.catt = this.actRoute.snapshot.params['id'];
   }
   reloadCurrentPage() {
     window.location.reload();

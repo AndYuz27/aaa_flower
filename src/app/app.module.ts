@@ -19,6 +19,7 @@ const routers: Routes = [
   {path: "", component: HomePage},
   {path: "about", component: AboutPage},
   {path: "all", component: AllPlants},
+  {path: "category/:id", component: PlantsPart},
   { path: "plant/:id", component: PlantsPage },
   {path: "**", component: NotFound},
 
