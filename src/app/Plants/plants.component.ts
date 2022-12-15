@@ -21,7 +21,7 @@ export class AllPlants  implements OnInit{
     window.location.reload();
    }
   modalAdd(){
-    this.display = "block"
+    this.display = "flex"
   }
   modalRem(){
     this.display = "none"

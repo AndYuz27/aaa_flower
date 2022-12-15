@@ -1,7 +1,7 @@
 
 <div class="allPlants">
-  <div class="clms">
-  <div class="aaa" *ngFor="let plt of plantsPart">
+  <div class="clms" *ngFor="let plt of plantsPart">
+  <div class="aaa">
     <div class="ffg" *ngIf="plt.category === catt"> 
     <p>Название растения: {{plt.name}}</p>
     <p>{{plt.category}}</p>

@@ -1,13 +1,14 @@
 
-<div [style.display]="display" class="container">
-  <button (click)="modalRem()">X</button>
+<div [style.display]="display" class="container--t">
+  <div class="hhjj">
+  <button class="close-btn" (click)="modalRem()">X</button>
   <h1>Add Plant Page</h1>
   <form #plantsFrom="ngForm" (ngSubmit)="onPlantCreate(plantsFrom.value)">
     <input type="text" placeholder="Название" name="name" ngModel>
     <input type="text" placeholder="Описание" name="description" ngModel>
     <input type="url" placeholder="Изображение" name="images" ngModel>
     <!-- <input type="text" placeholder="Категория" name="category" ngModel> -->
-    <select name="category" required="required" id="cat" ngModel>
+    <select name="category" required="required" placeholder="Категория" id="cat" ngModel0>
       <option value="Деревья">Деревья</option>
       <option value="Уличные">Уличные</option>
       <option value="Садовые">Садовые</option>
@@ -18,9 +19,10 @@
     <input type="number" placeholder="Температура" name="temperature" ngModel>
     <input type="submit" value="Add Plant">
   </form>
-
+  </div>
 </div>
-<button (click)="modalAdd()">add plant</button>
+
+<button class="add-btn" (click)="modalAdd()">add plant</button>
 <div class="allPlants">
   <div class="clms">
   <div class="card" *ngFor="let plt of allPlants">
