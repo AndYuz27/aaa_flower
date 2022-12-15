@@ -28,19 +28,30 @@ h1{
 }
 .clms{
   display: grid;
-  grid-template-columns: 430px auto 52%;
+  grid-template-columns: 0fr 15px;
   gap: 25px;
   width: 100%;
 }
 .card{
   padding: 15px;
+  border-radius: 25px;
   width: 400px;
-  height:  400px;
+  height:  auto;
   background-color: chartreuse;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 .allPlants{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+img{
+  border-radius: 15px;
+
 }

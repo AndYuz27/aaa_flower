@@ -14,7 +14,7 @@
       <option value="Домашние">Домашние</option>
     </select>
     <input type="number" placeholder="Солнце" name="sunlight" ngModel>
-    <input type="number" placeholder="Полив" name="wathering" ngModel>
+    <input type="number" placeholder="Полив" name="watering" ngModel>
     <input type="number" placeholder="Температура" name="temperature" ngModel>
     <input type="submit" value="Add Plant">
   </form>
@@ -24,7 +24,7 @@
 <div class="allPlants">
   <div class="clms">
   <div class="card" *ngFor="let plt of allPlants">
-    <p>Название растения: {{plt.name}}</p>
+    <p>Название растения: <b>{{plt.name || "нету названия"}}</b> </p>
     <img src="{{plt.images[0]}}" alt="{{plt.name}}" width="350">
     <a routerLink="/plant/{{plt._id}}" routerLinkActive="active">See more</a>
 

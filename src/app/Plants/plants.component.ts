@@ -35,7 +35,7 @@ export class AllPlants  implements OnInit{
   //   this.fetchPlants()
   // }
 
-  onPlantCreate(plants: {name: string, description: string, images: string[], category: string, sunlight: number, wathering:number, temperature: number}){
+  onPlantCreate(plants: {name: string, description: string, images: string[], category: string, sunlight: number, watering:number, temperature: number}){
     console.log(plants)
     this.http.post<{name: string}>('https://api.petiteweb.dev/plants', plants)
     .subscribe((res) =>{
