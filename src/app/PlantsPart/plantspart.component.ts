@@ -4,14 +4,15 @@ import { map } from "rxjs/operators";
 import { Plants } from "src/app/model/plant";
 
 @Component({
-  selector:"add-plant-page",
-  templateUrl: "./plants.component.html",
-  styleUrls: ["./plants.component.scss"]
+  selector:"plant-part",
+  templateUrl: "./plantspart.component.html",
+  styleUrls: ["./plantspart.component.scss"]
 })
 
-export class AllPlants  implements OnInit{
+export class PlantsPart  implements OnInit{
   display = "none"
   allPlants: Plants[] = []
+  plantsPart = this.allPlants.slice(1, 4);
   
 
   constructor(private http: HttpClient){
@@ -30,36 +31,23 @@ export class AllPlants  implements OnInit{
     this.fetchPlants()
   }
   
-
-  // onPlantsFetch(){
-  //   this.fetchPlants()
-  // }
-
-  onPlantCreate(plants: {name: string, description: string, images: string[], category: string, sunlight: number, wathering:number, temperature: number}){
-    console.log(plants)
-    this.http.post<{name: string}>('https://api.petiteweb.dev/plants', plants)
-    .subscribe((res) =>{
-      console.log(res)
-      alert("Ваше растение было добавлено")
-      this.reloadCurrentPage()
-    })
-  }
   private fetchPlants(){
     this.http.get<{[key: string]: Plants}>('https://api.petiteweb.dev/plants')
     .pipe(map((res) => {
-      const plants = []
+      let plants = []
+      let pPlants = plants.slice(1, 2)
        for(const key in res){
         if(res.hasOwnProperty(key)){
-          plants.push({...res[key], id: key})
+          pPlants.push({...res[key], id: key})
           console.log(res)
         }
         
        }
-       return plants;
+       return pPlants;
     }))
     .subscribe((palnts)=>{
       console.log(palnts)
-      this.allPlants = palnts;
+      this.plantsPart = palnts;
     })
   }
 }

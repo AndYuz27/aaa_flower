@@ -6,7 +6,13 @@
     <input type="text" placeholder="Название" name="name" ngModel>
     <input type="text" placeholder="Описание" name="description" ngModel>
     <input type="url" placeholder="Изображение" name="images" ngModel>
-    <input type="text" placeholder="Категория" name="category" ngModel>
+    <!-- <input type="text" placeholder="Категория" name="category" ngModel> -->
+    <select name="category" id="cat" ngModel>
+      <option value="Деревья">Деревья</option>
+      <option value="Уличные">Уличные</option>
+      <option value="Садовые">Садовые</option>
+      <option value="Домашние">Домашние</option>
+    </select>
     <input type="number" placeholder="Солнце" name="sunlight" ngModel>
     <input type="number" placeholder="Полив" name="wathering" ngModel>
     <input type="number" placeholder="Температура" name="temperature" ngModel>
@@ -20,6 +26,7 @@
   <div class="card" *ngFor="let plt of allPlants">
     <p>Название растения: {{plt.name}}</p>
     <img src="{{plt.images[0]}}" alt="{{plt.name}}" width="350">
+    <a routerLink="/plant/{{plt._id}}" routerLinkActive="active">See more</a>
 
   </div>
 </div>

@@ -11,7 +11,7 @@ import {NotFound} from "./NotFound/notfound.component";
 import {AllPlants} from "./Plants/plants.component";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PlantsPage } from './PlantPage/plantpage.component';
-
+import  {PlantsPart} from './PlantsPart/plantspart.component';
 
 
 //список путей SPA
@@ -34,6 +34,7 @@ const routers: Routes = [
     HeaderComponent,
     AboutPage,
     AllPlants,
+    PlantsPart,
     NotFound,
 
   ],
