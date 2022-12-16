@@ -29,7 +29,7 @@
   <div class="card" *ngFor="let plt of allPlants">
     <p>Название растения: <b>{{plt.name || "нету названия"}}</b> </p>
     <img src="{{plt.images[0]}}" alt="{{plt.name}}" width="350">
-    <a routerLink="/plant/{{plt._id}}" routerLinkActive="active">See more</a>
+    <a class="ffggg" routerLink="/plant/{{plt._id}}" routerLinkActive="active">See more</a>
 
   </div>
 </div>
